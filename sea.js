@@ -4,12 +4,13 @@ function wave(startX)
 {
 ctx.moveTo(startX,650);
 ctx.quadraticCurveTo(startX+400,400,startX+800,650);
-	
+
 }
 function drawWave()
 {
-ctx.clearRect(0, 0, canvas.width, canvas.height);
+ctx.closePath();
 ctx.beginPath();
+
 x1++;
 x2++;
 x3++;
@@ -22,8 +23,10 @@ if(x3<800) wave(x3);
 	else x3=-800;
 if(x4<800) wave(x4);
 	else x4=-800;
-
 ctx.fillStyle="#33ccff";
 ctx.fill();
+
+
+
 
 }
