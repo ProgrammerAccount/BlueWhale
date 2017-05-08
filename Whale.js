@@ -20,11 +20,10 @@ function drawEye(bool)
     ctx.moveTo(85,-20);
     ctx.arc(85 ,-20,8,0,Math.PI);
     ctx.closePath();
-
     ctx.fill();
     ctx.restore();
     }
-    else
+    else // wyswietl połowe (mrugnięte ) oko
     {
     ctx.save();
     ctx.moveTo(85,-20);
@@ -41,25 +40,18 @@ function drawEye(bool)
     ctx.restore();
     }
 }
-function drawWhale(bool)
+function drawWhale(angle)
 {
     
-    var img=document.getElementById("whale");
-    if(bool===true) angle=angle+0.1;
-    else angle=angle-0.1;
-    
+    var img=document.getElementById("whale");  
     ctx.save();
-    ctx.translate(canvas.width/2,canvas.height/2+100);
+    ctx.translate(canvas.width/2,canvas.height/2+168);
     ctx.rotate(angle*Math.PI/180);    
     ctx.drawImage(img,-img.width/2,-img.height/2,300,300);
-    drawEye(bool);
-    ctx.restore();
-    //console.log(angle);
-   
-
-    
-
-    
+    if(angle>0)
+    drawEye(true);
+    else drawEye(false); 
+    ctx.restore();  
 }
 
 

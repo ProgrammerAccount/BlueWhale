@@ -6,6 +6,7 @@
 {
     z-index:-5;
     position: fixed;
-    top:380px;
-    left:250px;
+    top:0;
+    left:0;
+    display:none;
 }

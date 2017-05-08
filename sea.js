@@ -23,7 +23,7 @@ if(x3<800) wave(x3);
 	else x3=-800;
 if(x4<800) wave(x4);
 	else x4=-800;
-ctx.fillStyle="#33ccff";
+ctx.fillStyle="#4189f4";
 ctx.fill();
 
 
